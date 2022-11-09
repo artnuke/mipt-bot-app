@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:4.4
+    environment:
+      MONGO_INITDB_DATABASE: mipt
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  keeper-bot:
+    image: keeper-bot:latest
+    environment:
+      TG_TOKEN: 5747557099:AAHE7F-69x8H8yJJYKBPd55CtG3DvOGCKnI
+      MONGO_URL: mongodb://mongodb:27017/mipt
+
+  meetpoint-bot:
+    image: meetpoint-bot:latest
+    environment:
+      TG_TOKEN: 5206989922:AAEpZSQQGimzhAHlnj9OWd-5jGO726gPijw
+      MONGO_URL: mongodb://mongodb:27017/mipt
