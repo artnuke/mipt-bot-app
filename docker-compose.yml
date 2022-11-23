@@ -12,11 +12,18 @@ services:
   keeper-bot:
     image: keeper-bot:latest
     environment:
-      TG_TOKEN: <TG_TOKEN>
+      TG_TOKEN: 5747557099:AAHjdM-HhZMRBiyz6muEkvhbmFl5bV8WA-Y
       MONGO_URL: mongodb://mongodb:27017/mipt
 
   meetpoint-bot:
     image: meetpoint-bot:latest
     environment:
-      TG_TOKEN: <TG_TOKEN>
+      TG_TOKEN: 5206989922:AAFN97LIVPIx4FQUhqdaHu_1jVhFGjaeyK8
+      MONGO_URL: mongodb://mongodb:27017/mipt
+
+  admin:
+    image: mipt-admin:latest
+    ports:
+      - 8000:8000
+    environment:
       MONGO_URL: mongodb://mongodb:27017/mipt
