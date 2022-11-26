@@ -5,4 +5,4 @@ docker-compose up --build
 
 ## Notes
 
-To start mongodb and init "botdb" collection we are using monogo-init.js
+To start mongodb and init "botdb" collection we are using monogo-init.jstest string
