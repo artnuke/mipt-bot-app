@@ -12,13 +12,13 @@ services:
   keeper-bot:
     image: keeper-bot:latest
     environment:
-      TG_TOKEN: 5747557099:AAHjdM-HhZMRBiyz6muEkvhbmFl5bV8WA-Y
+      TG_TOKEN: <TOKEN>
       MONGO_URL: mongodb://mongodb:27017/mipt
 
   meetpoint-bot:
     image: meetpoint-bot:latest
     environment:
-      TG_TOKEN: 5206989922:AAFN97LIVPIx4FQUhqdaHu_1jVhFGjaeyK8
+      TG_TOKEN: <TOKEN>
       MONGO_URL: mongodb://mongodb:27017/mipt
 
   admin:
